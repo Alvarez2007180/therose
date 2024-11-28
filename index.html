@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>Proyecto</title>
+<style>/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.menu {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ #menu{
+    display: none;
+  }
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom:100px;
+ 
+  
+}
+
+.menu-icono {
+  display: none;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Inicio Styles */
+.inicio {
+  background-color: gainsboro;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.inicio img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.inicio h1{
+  margin-bottom: 10px;
+}
+h1{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* Main Styles */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.header img{
+   width: 100%;
+  height: 700px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.integrantes {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.integrantes img {
+  width: 100%;
+  height:1100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.integrantes-carrera img {
+  width: 100%;
+  height: 900px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.integrantes h2 {
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+/* Discografia Styles */
+
+.discografia {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.discografia table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.discografia th, .discografia td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.discografia th {
+  background-color: #f0f0f0;
+}
+
+/* Conciertos Styles */
+
+.conciertos {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.conciertos img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.conciertos h5 {
+  margin-bottom: 10px;
+}
+h5 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Curiosidades Styles */
+
+.curiosidades {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.curiosidades img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.curiosidades h6 {
+  margin-bottom: 10px;
+}
+h6 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Videos Styles */
+
+.videos {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.videos h7 {
+  margin-bottom: 10px;
+}
+.videos img{
+   width: 100%;
+  height: 800px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+h7 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.videos a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Footer Styles */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 991px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar li {
+    margin-bottom: 10px;
+  }
+
+.inicio img {
+  width: 100%;
+  height: 200px;
+  
+}
+  .integrantes {
+    margin-bottom: 10px;
+  }
+.integrantes img {
+  width: 100%;
+  height: 400px;
+  
+}
+
+.integrantes-carrera img {
+  width: 100%;
+  height: 250px;
+ 
+  }
+  .conciertos {
+    margin-bottom: 10px;
+  }
+.conciertos img {
+  width: 100%;
+  height: 200px;
+ 
+}
+  .curiosidades {
+    margin-bottom: 10px;
+  }
+.curiosidades img {
+  width: 100%;
+  height: 200px;
+ 
+}
+  .videos {
+    margin-bottom: 10px;
+  }
+.videos img{
+   width: 100%;
+  height: 400px;
+ 
+}
+}
+
+@media (max-width: 991px) {
+  .menu {
+    flex-direction: column;
+  }
+  #menu{
+    display: none;
+  }
+  . menu label{
+    cursor: pointer;
+  }
+  .logo {
+    margin-bottom: 10px; 
+    
+  }
+  .menu-icono {
+    display: block;
+    cursor: pointer;
+height=50;
+width=50;
+  }
+  .navbar ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 20px;
+    border: 1px solid #444;
+  }
+  .navbar li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .navbar a {
+    display: block;
+  }
+  #menu:checked + label + .navbar ul {
+    display: block;
+  }
+}
+
+</style>
+
+</head>
+<body>
+  
+  <header class="header">
+    <div class="menu container">
+<div class="menu container">
+  <div class="logo">The Rose</div>
+  <input type="checkbox" id="menu"/>
+  <label for="menu">
+    <img src="https://cdn-icons-png.flaticon.com/512/3388/3388823.png" class="menu-icono" alt="" height="50" width="50">
+  </label>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="integrantes.html">Integrantes</a></li>
+      <li><a href="carrera.html">Carrera</a></li>
+      <li><a href="discografia.html">Discografia</a></li>
+      <li><a href="conciertos.html">Conciertos/Tours</a></li>
+      <li><a href="curiosidades.html">Curiosidades</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="sitios.html">Sitios oficiales</a></li>
+    </ul>
+  </nav>
+</div>
+    </header>
+    <section class="inicio">
+    <div class="header-content container">
+      <img  contenteditable="header" src="https://apeconcerts.com/wp-content/uploads/2023/07/1024_Color.jpg"></img>
+      <h1>The Rose</h1>
+      <p>
+        <br> Nombre:
+        <br>
+        <br>The Rose (Internacional).
+      <br>더 로즈 (Deo lojeu) en Corea.
+        <br>
+        <br> ¿Por qué 'The Rose'?:
+        <br>
+        <br>Existen muchos colores distintos de rosas y ellos quieren mostrarnos
+       que son una banda con muchos colores de música. También 
+      simboliza que la música del grupo es tan hermosa como una flor de
+       rosa, y al mismo tiempo tiene un fuerte estilo de acupuntura en el
+       tallo de la rosa, y la rosa tiene varios colores además del rojo, lo que 
+      significa que se espera traer . Todos tienen un aspecto musical rico y 
+      variado.
+        <br>
+        <br>Origen: Corea del Sur.
+      <br>Debut: 03 de Agosto del 2017.
+      <br>Número de Integrantes: 4 chicos (3 Coreanos y 1 estadounidense).     
+
+      <br>Nombre fanclub oficial: Black Rose.
+        <br>
+        <br>¿Por qué Black Rose?: 
+        <br>
+        <br>Las rosas negras en corea significan protección, es decir que las fans protegen a The Rose.
+        <br>
+        <br>Lema: -
+      <br>Color Oficial: -
+      <br>Género: K-Pop, Rock
+      <br>Agencia: Transparent Arts
+      <br>Solistas:
+Woo Sung (2019)
+      </p>
+    </div>
+    </section>
+  
+  
+ 
+    <main class="integrantes">
+    <div class="integranres-content container">
+   <img  class="integrantes-img" src="https://static.wikia.nocookie.net/drama/images/c/c1/The_Rose11.jpg/revision/latest?cb=20230928095117&path-prefix=es"  width="100" height="100"alt="">
+    <div class="integrantes-content container">
+      <h2>Integrantes</h2>
+      <p class="txt-p">Woo Sung (Líder, Vocalista, Rapero y Guitarrista)
+      <br>Do Joon (Vocalista, Rapero, Guitarrista y Tecladista)
+      <br>Ha Joon (Vocalista y Baterista)
+      <br>Jae Hyeong (Vocalista, Bajista y Maknae)</p>
+      <div class="integrantes-carrera">
+        <div class="integrantes-1">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/The_Rose_2023.jpg" alt="">
+          <h3>Carrera</h3>
+          <p>
+               <br>Pre-Debut.
+      <br>
+      <br>The Rose, antes de debutar como grupo, ya llevaban mucho tiempo publicando covers en las redes sociales y haciendo buskings en las calles de Corea del Sur.
+      <br>
+      <br>2017: Debut con su Primer Single "Sorry"
+      <br>
+      <br>El 3 de Agosto del 2017, The Rose debuta con su primer single "Sorry" junto el MV. "Sorry" es una canción que ellos mismos han producido y compuesto además de crear su propia letra para completar todo el trabajo de la creación del single. "Sorry", es una canción de amor triste basada en la música pop británica. Expresa un hombre que lamenta profundamente a su amante egoísta y reza por la otra persona para poder Vuelve a su lado. Obtuvo el octavo lugar en la lista de música pop coreana de iTunes, y se clasificó entre los 10 primeros en la lista de música pop coreana de ocho países, incluidos Canadá, Gran Bretaña, Alemania y Francia. 
+      <br>
+      <br>Regreso con un Segundo Single "Like We Used To"
+      
+      <br> <br>El 01 de noviembre, The Rose regresa con segundo single "Like We Used To" después de 3 meses con su primer single debut "Sorry", "Like We Used To" cuenta con dos canciones, la principal "Like We Used To" y la segunda "Sorry" su anterior canción debut. En noviembre, se lanzó el segundo sencillo "Like We Used To", que combina el estilo de rock lírico y cuenta el estado de ánimo inolvidable de los recuerdos del pasado.
+      <br>
+      <br>2018: Regreso con su Primer Mini Album "Void"
+      <br>
+      <br>El 9 de Abril de 2018, se reveló que The Rose estaría de vuelta el 16 de Abril con su primer mini álbum "Void", el cual contendrá sus dos canciones lanzadas anteriormente, 3 canciones nuevas y los instrumentales de las canciones "Sorry" "I.L.Y" y "Baby".
+      <br>
+      <br>El 15 de Abril, se lanzo el MV de 'Baby'.
+      <br>
+      <br>El 16 de Abril, se lanzó el mini-álbum "Dawn" a las plataformas de música.
+      <br>
+      <br>El 23 de mayo, se lanzo un MV Special de "I.L.Y".
+      <br>
+      <br>Regreso con su Segundo Mini Album "Dawn"
+      <br>
+     <br>El 18 de septiembre, The Rose anunció oficialmente su regreso. La banda idol volverá con su segundo mini album titulado "Dawn" el cual contendrá las canciones " I Don´t Know You" "She's in the rain" "Take me Down" "Insomnia" y tambien incluye una pista instrumental de She´s in the Rain. Este es su regreso después de 6 meses desde el album "Void" en abril.
+      <br>
+      <br>2019: Regreso con su Tercer Single 'Red'
+      <br>
+      <br>The Rose regresará con su tercer single, "Red", el 13 de Agosto a las 6 PM KST. 
+      <br>
+      <br>2022-presente: regreso y nueva label
+      <br>
+      <br>Tras el regreso de Dojoon, Hajoon y Jaehyeong del servicio militar, y el lanzamiento del álbum en solitario de Woosung, Moth, Woosung confirmó el sello propio de la banda, Windfall. En agosto de 2022, la banda firmó con Transparent Arts de Far East Movement como su nuevo sello, con Transparent y Wasserman Music representando a la banda. El 7 de octubre lanzaron el sencillo "Sour" junto con su primer álbum de estudio, Heal. Además, en apoyo de Heal, anunciaron su gira mundial, Heal Together World Tour, con fechas en Norteamérica, Sudamérica, Europa y Asia desde 2022 hasta 2023.
+      <br>
+      <br>El 21 de abril de 2023, Suga de BTS colaboró ​​con Woosung y el fallecido Ryuichi Sakamoto en una canción titulada "Snooze", que es la novena pista del álbum en solitario, D-Day.
+      <br>
+      <br>El 21 de julio de 2023, lanzaron su sencillo "Back To Me/Alive" con el vídeo musical de la canción "Back To Me" seguido de un vídeo musical de "Alive" el 29 de julio de 2023. Su segundo álbum de estudio, Dual, lanzado el 22 de septiembre de 2023.
+      <br>
+      <br>En octubre de 2023, su álbum “DUAL” llegó a la lista Billboard 200 en el puesto 83 en su primera semana de lanzamiento. Además de figurar en las listas 200, también hicieron un debut trascendental en el lanzamiento de Transparent Arts con el puesto número 1 en Artistas emergentes, #33 en la lista de artistas, #5 en ventas de álbumes, #5 en ventas de álbumes actuales, #3 en álbumes alternativos actuales, #2 en álbumes de rock actuales, #7 en álbumes digitales y #2 en álbumes de Internet. Además, la banda comenzó su gira Dawn to Dusk por Estados Unidos y Canadá el 4 de octubre de 2023, seguida de la gira por Filipinas el 26 de enero de 2024.
+          </p>
+        </div>
+      </div>
+      
+      
+    </div>
+    </main>
+      <section class="discografia">
+        <div class="discografia-content container">
+          <h4>Discografia</h4>
+          <div class="discografia-group">
+            <div class="discografia-1">
+                  <table border="1">
+      <tr>
+        <td>Álbum</td>
+        <td>Fecha de lanzamiento</td>
+        <td>Listas de canciones</td>
+      </tr>
+      <tr>
+        <td>Heal <img src="https://static.wikia.nocookie.net/drama/images/2/24/4080429.jpg/revision/latest?cb=20221007091720&path-prefix=es" width="100" height="100"></td>
+        <td>07-Octubre-2022</td>
+        <td>Definition of ugly is
+          <br>Childhood
+          <br>Shift
+          <br>Cure
+          <br>See-Saw
+          <br>Time
+          <br>Yes (Feat. James Reid)
+          <br>Sour</td>
+      </tr>
+      <tr>
+        <td>Dual <img src="https://static.wikia.nocookie.net/drama/images/2/26/33110882.jpg/revision/latest?cb=20230922041540&path-prefix=es" width="100" height="100"></td>
+        <td>22-Septiembre-2023</td>
+        <td>	
+          <br>Dawn
+          <br>You're Beautiful
+          <br>Nauseous
+          <br>Back To Me
+          <br>Lifeline
+          <br>Dusk
+          <br>Angel (Feat. Trevor Daniel)
+          <br>Eclipse
+          <br>Alive
+          <br>Cosmo
+          <br>Wonder</td>
+      </tr>
+    </table>
+    <br>
+      <table border="1">
+      <tr>
+        <td> Mini álbum</td>
+        <td>Fecha de lanzamiento</td>
+        <td>Listas de canciones</td>
+      </tr>
+        <tr>
+        <td>Void <img src="https://static.wikia.nocookie.net/drama/images/a/a0/20160485.jpg/revision/latest?cb=20180416031202&path-prefix=es" width="100" height="100"></td>
+        <td>16-Abril-2018</td>
+        <td>Candy (so good)
+          <br>BABY
+          <br>I.L.Y.
+          <br>Sorry
+          <br>좋았는데 (Like We Used To)
+          <br>BABY (Inst.)
+          <br>Sorry (Inst.)
+          <br>I.L.Y. (Inst.)</td>
+      </tr>
+        <tr>
+        <td>Dawn <img src="https://static.wikia.nocookie.net/drama/images/e/e7/The_Rose_%28Grupo%29_-_Dawn-CD.jpg/revision/latest?cb=20181004115857&path-prefix=es" width="100" height="100"></td>
+        <td>04-Octubre-2018</td>
+        <td>I Don`t Know You
+          <br>She`s In The Rain
+          <br>Take Me Down
+          <br>불면증 (Insomnia)
+          <br>She`s In The Rain (Inst.)</td>
+      </tr>
+    </table>
+    <br>
+    <table border="1">
+      <tr>
+        <td>Singles</td>
+        <td>Fecha de lanzamiento</td>
+        <td>Listas de canciones</td>
+      </tr>
+      <tr>
+        <td>Sorry <img src="https://static.wikia.nocookie.net/drama/images/6/6d/The_Rose_1st_Single_%E2%80%98Sorry%E2%80%99.jpg/revision/latest?cb=20170803030659&path-prefix=es" width="100" height="100"></td>
+        <td>03-Agosto-2017</td>
+        <td>Sorry</td>
+      </tr>
+      <tr>
+        <td>Like We Used To<img src="https://static.wikia.nocookie.net/drama/images/9/96/TR_S02.jpg/revision/latest?cb=20171101031719&path-prefix=es" width="100" height="100"></td>
+        <td>01-Noviembre-2017</td>
+        <td>좋았는데 (Like We Used To)
+          <br>Sorry</td>
+      </tr>
+      <tr>
+        <td>Red<img src="https://static.wikia.nocookie.net/drama/images/c/c7/20270998.jpg/revision/latest?cb=20190813093838&path-prefix=es" width="100" height="100"></td>
+        <td>13-Agosto-2019</td>
+        <td>California
+          <br>Red
+          <br>Red (Inst.)</td>
+      </tr>
+      <tr>
+        <td>Beauty and the Beast<img src="https://static.wikia.nocookie.net/drama/images/f/f8/20441920.jpg/revision/latest?cb=20211229091132&path-prefix=es" width="100" height="100"></td>
+        <td>29-Diciembre-2021</td>
+        <td>미녀와 야수 (Beauty and the Beast)
+          <br>미녀와 야수 (Beauty and the Beast) (Inst.)</td>
+      </tr>
+      <tr>
+        <td>Childhood<img src="https://static.wikia.nocookie.net/drama/images/6/6f/4079767.jpg/revision/latest?cb=20220916173810&path-prefix=es" width="100" height="100"></td>
+        <td>16-Septiembre-2022</td>
+        <td>Childhood</td>
+      </tr>
+      <tr>
+        <td>Back To Me / Alive<img src="https://static.wikia.nocookie.net/drama/images/6/6b/32317340.jpg/revision/latest?cb=20230721040644&path-prefix=es" width="100" height="100"></td>
+        <td>21-Julio-2023</td>
+        <td>Back To Me
+          <br>Alive</td>
+      </tr>
+      <tr>
+        <td>You're Beautiful<img src="https://static.wikia.nocookie.net/drama/images/5/55/32851993.jpg/revision/latest?cb=20230825090755&path-prefix=es" width="100" height="100"></td>
+        <td>25-Agosto-2023</td>
+        <td>You're Beautiful</td>
+      </tr>
+      <tr>
+        <td>Lifeline (Reborn)<img src="https://static.wikia.nocookie.net/drama/images/0/0d/34670929.jpg/revision/latest?cb=20240405201853&path-prefix=es" width="100" height="100"></td>
+        <td>05-Abril-2024</td>
+        <td>Lifeline (Reborn)</td>
+      </tr>
+    </table>
+              
+    
+            </div>
+          </div>
+          <p>Temas para dramas
+      <br>
+      Strangers tema para Strangers from Hell (2019)
+      <br>With You tema para Tofu Personified (2018)</p>
+        </div>
+      </section>
+      
+      <section class="conciertos">
+        <div class="conciertos-1">
+          <h5>Conciertos/Tours</h5>
+          <img src="https://imgmedia.larepublica.pe/1200x630/larepublica/original/2022/08/08/62f167996ff9cb1e9539ed0f.jpg" width="100" height="100">
+          <p>The Rose 1st Concert "The Black Rose Day" 2017
+      <br>
+      <br>The Rose 1st World Tour "Paint It Rose" 2018
+      <br>
+      <br>  The Rose "Paint It Rose 2nd Coloring" 2018 in Europe 
+      <br>
+      <br> The Rose World Tour "We Rose You" 2019
+      <br>
+      <br> The Rose World Tour "HEAL TOGETHER" 2022-2023</p>
+        </div>
+      </section>
+      <section class="curiosidades">
+        <div class="curiosidades-1">
+              <img src="https://0.soompi.io/wp-content/uploads/2022/08/08125644/The-Rose.jpeg" width="100" height="100">
+          <h6>Curiosidades</h6>
+          <p>Antes de ser The Rose, 3 de los miembros (Do Joon, Ha Joon y Jae Hyung) formaron un grupo en 2015 llamado "Windfall".
+      <br>
+      <br>Cada integrante tiene su color de rosa y su significado:
+      <br>Woo Sung (Blanco / Pureza)
+      <br>Do Joon (Rojo / Pasión)
+      <br>Ha Joon (Azul / Milagro)
+      <br>Jae Hyung (Rosa / Felicidad)
+      <br>
+      <br>Antes de debutar solían hacer shows en la calle cantando covers y su canción "Sorry".
+      <br>
+      <br>El 23 de Agosto de 2017 el MV debut "Sorry" alcanzó el millón de reproducciones en Youtube.
+      <br>
+      <br>Estuvieron involucrados en una controversia cuando se descubrió que en el MV 'She's in the rain' aparecían fotografías pertenecientes a Kim Jong Hyun de SHINee. Aquello llegó a tal grado de gravedad que el MV fue eliminado de la plataforma de YouTube.
+      <br>
+      <br>El 23 de mayo de 2018, en el canal de Youtube oficial de The Rose, se lanzo un MV Special de "I.L.Y".</p>
+          
+        </div>
+        
+      </section>
+      <section class="videos">
+        <div class="videos-1">
+          <img src="https://i.redd.it/the-rose-2nd-full-album-dual-concept-photos-v0-lcyd29ebdgmb1.jpg?width=1080&format=pjpg&auto=webp&s=a0fdc7efd1a2cdb7d9c9ec734ff75ea9edca3867"
+          <h7>Videos</h7>
+          <p>   <br> <a href="https://youtu.be/B-cKxO0m8g4?si=M9mdIRL7FkN0vv0T">Sorry</a>
+    <br> <a href="https://youtu.be/Ru8LG-_HGd4?si=ijobPJfU5SG_o6PT">Red</a>
+    <br> <a href="https://youtu.be/xUodb7ltZ6M?si=YoIils6x-7Ahe2oL">Beauty and the Beast</a>
+    <br><a href="https://youtu.be/UHJmMYAp518?si=Ajn2NlDc1xOnOB8o">Childhood</a>
+    <br> <a href="https://youtu.be/fuzLp9gDcwY?si=q3ZRsc7cNfpl_CyL">Back to me</a>
+    <br>  <a href="https://youtu.be/Pp2o5B8rFmQ?si=4r8PMSFMpmTgrmbl">Alive</a>
+    <br><a href="https://youtu.be/VFfhmsAXV-8?si=kp2B1GagPP-QyB0e">Lifeline (Reborn)</a>
+    <br><a href="https://youtu.be/bAbwLuoxAlA?si=1DgKJ7BY6CPYlap4">Sour</a>
+    <br> <a href="https://youtu.be/7IFJQRlcNQ0?si=Wgw-bAFNxB3nf3UV">You're Beautiful</a>
+    <br><a href="https://youtu.be/dpGU2WHj3VU?si=BONI12EUlaTIIO99">Wonder</a></p>
+        </div>
+      </section>
+      
+      <footer class="footer">
+        <div class="footer-content container">
+        <div class="link"> 
+          <h8>Sitios ofciales</h8>
+          <ul>
+            <li> <a href="https://twitter.com/TheRose_0803">Twitter</a></li>
+              <li>  <a href="https://www.tiktok.com/@official.therose?_t=8rNRo5Vt9pX&_r=1">Tiktok</a></li>
+                <li><a href="https://youtube.com/@theroseofficial?si=2X3kkBUCWprBQVqd">Youtube</a></li>
+                  <li> <a href="https://www.instagram.com/official_therose?igsh=MWQwbWI1a2ZlOHdjNA==">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/therose0803">Facebook</a></li>
+ <li><a href="https://open.spotify.com/intl-es/artist/5na1LmEmK2VzNLje9snJYW?si=VIJHu9nqSsCsWDtROpsDkw">Spotify</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+      
+        
+</body>
+</html>
+
+
